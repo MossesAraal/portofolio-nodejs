@@ -9,7 +9,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-    res.render(__dirname + "/views/index.ejs", {nama: "Mosses Ara'al De Sela"});
+    res.render(__dirname + "/views/index.ejs");
+})
+
+app.get("/about", (req, res) => {
+    res.render(__dirname + "/views/about.ejs");
 })
 
 app.listen(port, () => {
